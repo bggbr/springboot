@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jpabook.jpashop.member.MemberRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-03T06:07:46" hostname="bangui-MacBookPro.local" time="0.286">
+<testsuite name="jpabook.jpashop.member.MemberRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-09T05:56:06" hostname="bangui-MacBookPro.local" time="0.31">
   <properties/>
-  <testcase name="testMember()" classname="jpabook.jpashop.member.MemberRepositoryTest" time="0.286"/>
-  <system-out><![CDATA[15:07:45.385 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [jpabook.jpashop.member.MemberRepositoryTest]: MemberRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-15:07:45.420 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration jpabook.jpashop.JpashopApplication for test class jpabook.jpashop.member.MemberRepositoryTest
+  <testcase name="testMember()" classname="jpabook.jpashop.member.MemberRepositoryTest" time="0.31"/>
+  <system-out><![CDATA[14:56:04.623 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [jpabook.jpashop.member.MemberRepositoryTest]: MemberRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:56:04.662 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration jpabook.jpashop.JpashopApplication for test class jpabook.jpashop.member.MemberRepositoryTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,27 +14,56 @@
 
  :: Spring Boot ::                (v3.3.3)
 
-2024-09-03T15:07:45.562+09:00  INFO 17159 --- [jpashop] [    Test worker] j.jpashop.member.MemberRepositoryTest    : Starting MemberRepositoryTest using Java 17.0.12 with PID 17159 (started by bang in /Users/bang/Documents/SpringBoot/playground/springboot)
-2024-09-03T15:07:45.562+09:00  INFO 17159 --- [jpashop] [    Test worker] j.jpashop.member.MemberRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
-2024-09-03T15:07:45.779+09:00  INFO 17159 --- [jpashop] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-09-03T15:07:45.787+09:00  INFO 17159 --- [jpashop] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
-2024-09-03T15:07:45.935+09:00  INFO 17159 --- [jpashop] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-09-03T15:07:45.952+09:00  INFO 17159 --- [jpashop] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-09-03T15:07:45.964+09:00  INFO 17159 --- [jpashop] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-09-03T15:07:46.061+09:00  INFO 17159 --- [jpashop] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-09-03T15:07:46.070+09:00  INFO 17159 --- [jpashop] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-09-03T15:07:46.102+09:00  INFO 17159 --- [jpashop] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/jpashop user=SA
-2024-09-03T15:07:46.103+09:00  INFO 17159 --- [jpashop] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-09-03T15:07:46.377+09:00  INFO 17159 --- [jpashop] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-09-03T15:07:46.382+09:00 DEBUG 17159 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop table if exists member cascade 
-2024-09-03T15:07:46.384+09:00 DEBUG 17159 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop sequence if exists member_seq
-2024-09-03T15:07:46.387+09:00 DEBUG 17159 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create sequence member_seq start with 1 increment by 50
-2024-09-03T15:07:46.388+09:00 DEBUG 17159 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create table member (id bigint not null, username varchar(255), primary key (id))
-2024-09-03T15:07:46.390+09:00  INFO 17159 --- [jpashop] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-09-03T15:07:46.458+09:00  WARN 17159 --- [jpashop] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-09-03T15:07:46.620+09:00  INFO 17159 --- [jpashop] [    Test worker] j.jpashop.member.MemberRepositoryTest    : Started MemberRepositoryTest in 1.153 seconds (process running for 1.515)
-2024-09-03T15:07:46.875+09:00 DEBUG 17159 --- [jpashop] [    Test worker] org.hibernate.SQL                        : select next value for member_seq
-2024-09-03T15:07:46.907+09:00 DEBUG 17159 --- [jpashop] [    Test worker] org.hibernate.SQL                        : insert into member (username,id) values (?,?)
+2024-09-09T14:56:04.817+09:00  INFO 29137 --- [jpashop] [    Test worker] j.jpashop.member.MemberRepositoryTest    : Starting MemberRepositoryTest using Java 17.0.12 with PID 29137 (started by bang in /Users/bang/Documents/SpringBoot/playground/springboot)
+2024-09-09T14:56:04.818+09:00  INFO 29137 --- [jpashop] [    Test worker] j.jpashop.member.MemberRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
+2024-09-09T14:56:05.035+09:00  INFO 29137 --- [jpashop] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-09T14:56:05.044+09:00  INFO 29137 --- [jpashop] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2024-09-09T14:56:05.210+09:00  INFO 29137 --- [jpashop] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-09T14:56:05.231+09:00  INFO 29137 --- [jpashop] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-09-09T14:56:05.242+09:00  INFO 29137 --- [jpashop] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-09T14:56:05.351+09:00  INFO 29137 --- [jpashop] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-09T14:56:05.361+09:00  INFO 29137 --- [jpashop] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-09-09T14:56:05.394+09:00  INFO 29137 --- [jpashop] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/jpashop user=SA
+2024-09-09T14:56:05.395+09:00  INFO 29137 --- [jpashop] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-09-09T14:56:05.789+09:00  INFO 29137 --- [jpashop] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-09-09T14:56:05.793+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop table if exists category cascade 
+2024-09-09T14:56:05.798+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop table if exists category_item cascade 
+2024-09-09T14:56:05.799+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop table if exists delivery cascade 
+2024-09-09T14:56:05.800+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop table if exists item cascade 
+2024-09-09T14:56:05.802+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop table if exists member cascade 
+2024-09-09T14:56:05.803+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop table if exists order_item cascade 
+2024-09-09T14:56:05.804+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop table if exists orders cascade 
+2024-09-09T14:56:05.804+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop sequence if exists category_seq
+2024-09-09T14:56:05.805+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop sequence if exists delivery_seq
+2024-09-09T14:56:05.805+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop sequence if exists item_seq
+2024-09-09T14:56:05.806+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop sequence if exists member_seq
+2024-09-09T14:56:05.806+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop sequence if exists order_item_seq
+2024-09-09T14:56:05.806+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : drop sequence if exists orders_seq
+2024-09-09T14:56:05.809+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create sequence category_seq start with 1 increment by 50
+2024-09-09T14:56:05.810+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create sequence delivery_seq start with 1 increment by 50
+2024-09-09T14:56:05.811+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create sequence item_seq start with 1 increment by 50
+2024-09-09T14:56:05.811+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create sequence member_seq start with 1 increment by 50
+2024-09-09T14:56:05.812+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create sequence order_item_seq start with 1 increment by 50
+2024-09-09T14:56:05.812+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create sequence orders_seq start with 1 increment by 50
+2024-09-09T14:56:05.813+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create table category (category_id bigint not null, parent_id bigint, name varchar(255), primary key (category_id))
+2024-09-09T14:56:05.815+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create table category_item (category_id bigint not null, item_id bigint not null)
+2024-09-09T14:56:05.816+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create table delivery (delivery_id bigint not null, city varchar(255), street varchar(255), zipcode varchar(255), status enum ('COMP','READY'), primary key (delivery_id))
+2024-09-09T14:56:05.817+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create table item (price integer not null, stock_quantity integer not null, item_id bigint not null, dtype varchar(31) not null, actor varchar(255), artist varchar(255), author varchar(255), director varchar(255), etc varchar(255), isbn varchar(255), name varchar(255), primary key (item_id))
+2024-09-09T14:56:05.818+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create table member (member_id bigint not null, city varchar(255), street varchar(255), username varchar(255), zipcode varchar(255), primary key (member_id))
+2024-09-09T14:56:05.819+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create table order_item (count integer not null, order_price integer not null, item_id bigint, order_id bigint, order_item_id bigint not null, primary key (order_item_id))
+2024-09-09T14:56:05.819+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : create table orders (delivery_id bigint unique, member_id bigint, order_date timestamp(6), order_id bigint not null, primary key (order_id))
+2024-09-09T14:56:05.821+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : alter table if exists category add constraint FK2y94svpmqttx80mshyny85wqr foreign key (parent_id) references category
+2024-09-09T14:56:05.822+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : alter table if exists category_item add constraint FKu8b4lwqutcdq3363gf6mlujq foreign key (item_id) references item
+2024-09-09T14:56:05.823+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : alter table if exists category_item add constraint FKcq2n0opf5shyh84ex1fhukcbh foreign key (category_id) references category
+2024-09-09T14:56:05.824+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : alter table if exists order_item add constraint FKija6hjjiit8dprnmvtvgdp6ru foreign key (item_id) references item
+2024-09-09T14:56:05.826+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : alter table if exists order_item add constraint FKt4dc2r9nbvbujrljv3e23iibt foreign key (order_id) references orders
+2024-09-09T14:56:05.827+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : alter table if exists orders add constraint FKtkrur7wg4d8ax0pwgo0vmy20c foreign key (delivery_id) references delivery
+2024-09-09T14:56:05.828+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : alter table if exists orders add constraint FKpktxwhj3x9m4gth5ff6bkqgeb foreign key (member_id) references member
+2024-09-09T14:56:05.830+09:00  INFO 29137 --- [jpashop] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-09T14:56:05.901+09:00  WARN 29137 --- [jpashop] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-09T14:56:06.061+09:00  INFO 29137 --- [jpashop] [    Test worker] j.jpashop.member.MemberRepositoryTest    : Started MemberRepositoryTest in 1.347 seconds (process running for 1.736)
+2024-09-09T14:56:06.329+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : select next value for member_seq
+2024-09-09T14:56:06.372+09:00 DEBUG 29137 --- [jpashop] [    Test worker] org.hibernate.SQL                        : insert into member (city,street,zipcode,username,member_id) values (?,?,?,?,?)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

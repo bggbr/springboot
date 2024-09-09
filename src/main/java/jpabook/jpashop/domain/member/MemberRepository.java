@@ -1,4 +1,4 @@
-package jpabook.jpashop.member;
+package jpabook.jpashop.domain.member;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
