@@ -26,6 +26,8 @@ public class OrderItem {
     private int orderPrice;
     private int count;
 
+    protected OrderItem() {}
+
     /**
      * (생성 메서드)
      * 오더 아이템을 생성을 하면서 재고를 줄이는 로직
