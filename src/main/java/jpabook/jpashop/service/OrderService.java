@@ -13,6 +13,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
@@ -40,7 +42,7 @@ public class OrderService {
         // 주문 상품 생성
         OrderItem orderItem = OrderItem.createOrderItem(item, item.getPrice(), count);
 
-//        new OrderItem();
+        // new OrderItem();
 
         // 주문 생성
         Order order = Order.createOrder(member, delivery, orderItem);
@@ -54,15 +56,26 @@ public class OrderService {
         // CASCADE ALL로 관리한다.
         // 그게 아니라면 별도의 레포지토리를 생성해서 관리하는 것이 낫다.
         // 개념이 안 들어오면 모두 레포지토리로 관리하다 리팩토링 하는 것이 낫다.
-
     }
 
     /**
      * 주문 취소 로직
      */
+    @Transactional
+    public void cancelOrder(Long orderId) {
+
+        // 주문 엔티티 조회
+        Order order = orderRepository.findOne(orderId);
+
+        // 주문 취소
+        order.cancel();
+    }
 
     /**
      * 주문 검색 로직
      */
+//    public List<Order> findOrders(OrderSearch orderSearch) {
+//      return
+//    }
 
 }
