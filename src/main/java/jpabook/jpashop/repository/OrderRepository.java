@@ -21,6 +21,16 @@ public class OrderRepository {
         return em.find(Order.class, id);
     }
 
-//    public List<Order> findAll(OrderSearch orderSearch) {}
+//    public List<Order> findAll(OrderSearch orderSearch) {
+//        em.createQuery("select o from Order o join o.member m" +
+//                " where o.status = :status " +
+//                " and m.username like :username "
+//                , Order.class)
+//                .setParameter("status", orderSearch.getOrderStatus())
+//                .setParameter("username", orderSearch.getMemberName())
+//                .setMaxResults(1000) // 최대 1000 건
+//                .getResultList();
+        // 스프링부트, JPA, Querydsl 필수!
+//    }
 
 }
